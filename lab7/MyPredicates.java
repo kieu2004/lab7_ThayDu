@@ -86,9 +86,12 @@ public class MyPredicates {
 		System.out.println(coll_retain);
 
 		System.out.println("Method collect:");
-		Integer[] arrInteger_collect = { 0, 1, 3, 3, 8, 8, 5, 7, 0, 2 };
-		Collection<Integer> coll_collect = new ArrayList<>(Arrays.asList(arrInteger_collect));
-		System.out.println(coll_collect);
+		Collection<Integer> coll_collect = new HashSet<>();
+		coll_collect.add(3);
+		coll_collect.add(2);
+		coll_collect.add(4);
+		coll_collect.add(0);
+		coll_collect.add(1);
 		System.out.println(myPredicate.collect(coll_collect, predicate));
 
 		System.out.println("Method find:");
